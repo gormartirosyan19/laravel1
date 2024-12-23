@@ -1,0 +1,83 @@
+.posts-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.post-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 30%;
+}
+
+.post-item h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.post-item p {
+    color: #555;
+}
+
+.post-actions {
+    margin-top: 10px;
+}
+
+.post-actions a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: white;
+    background-color: #007bff;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.post-actions a:hover {
+    background-color: #0056b3;
+}
+
+.post-actions .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.post-actions .btn-danger:hover {
+    background-color: #c82333;
+}
+.container {
+    padding: 50px;
+}
+
+.create-btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    margin: 20px 0;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.create-btn:hover {
+    background-color: #0056b3;
+}
+
+.create-btn:active {
+    background-color: #004085;
+    transform: scale(0.98);
+}

@@ -1,0 +1,101 @@
+.user-info .image{
+    width: 200px;
+}
+/* Profile Page Styles */
+.profile {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile .user-info {
+    display: flex;
+}
+
+.profile .user-info .image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profile .user-info p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.profile .user-info p strong {
+    color: #2980b9;
+}
+
+.profile input[type="file"] {
+    display: none;
+}
+
+.profile .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.profile .btn:hover {
+    background-color: #2980b9;
+}
+
+.profile .btn i {
+    margin-right: 8px;
+}
+
+.profile .btn:focus {
+    outline: none;
+}
+.user-posts-links h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.user-posts-links ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.user-posts-links li {
+    margin-bottom: 10px;
+}
+
+.user-posts-links a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.user-posts-links a:hover {
+    background-color: #45a049;
+}
+
+.user-posts-links .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
