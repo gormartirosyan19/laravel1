@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use App\Mail\EmailVerification;
+use App\Models\Activity;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -50,6 +51,11 @@ class AuthController extends Controller
         }
 
         if (Auth::attempt($validated, $remember)) {
+            Activity::create([
+                'user_id' => Auth::id(),
+                'activity_type' => 'user_logged_in',
+                'activity_details' => 'has been logged in',
+            ]);
             return redirect()->intended('/profile');
         }
 
@@ -79,7 +85,7 @@ class AuthController extends Controller
 
         Mail::to($user->email)->send(new EmailVerification($user));
 
-        return redirect()->route('email.verify.form', ['token' => $verificationToken])
+        return redirect()->route('email.verify.form')
             ->with('status', 'Please check your email to verify your account.');
     }
 

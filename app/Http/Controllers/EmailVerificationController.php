@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Activity;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
 class EmailVerificationController extends Controller
 {
-    public function showVerifyForm($token)
+    public function showVerifyForm()
     {
-        return view('auth.verifyForm',compact('token'));
+        return view('auth.verifyForm');
     }
 
     public function verifyEmail(Request $request)
@@ -31,6 +34,12 @@ class EmailVerificationController extends Controller
         $user->verification_token= null;
         $user->verification_token_expires_at = null;
         $user->save();
+
+        Activity::create([
+            'user_id' => Auth::id(),
+            'activity_type' => 'user_registered',
+            'activity_details' => 'User registered a new account with email: ' . $user->email,
+        ]);
 
         return redirect()->route('login')->with('status', 'Your email has been verified. You can now log in.');
     }

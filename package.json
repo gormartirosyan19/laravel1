@@ -29,6 +29,8 @@
         "webpack-dev-server": "^5.2.0"
     },
     "dependencies": {
+        "slick-carousel": "^1.8.1",
+        "swiper": "^11.2.0",
         "toastr": "^2.1.4"
     }
 }

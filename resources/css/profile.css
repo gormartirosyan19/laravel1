@@ -1,7 +1,7 @@
 .user-info .image{
     width: 200px;
 }
-/* Profile Page Styles */
+
 .profile {
     padding: 20px;
     background-color: #f9f9f9;
@@ -66,8 +66,7 @@
 }
 
 .user-posts-links ul {
-    list-style-type: none;
-    padding-left: 0;
+    border: 1px solid grey;
 }
 
 .user-posts-links li {
@@ -77,21 +76,10 @@
 .user-posts-links a {
     text-decoration: none;
     display: inline-block;
-    background-color: #4CAF50;
-    color: white;
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.user-posts-links a:hover {
-    background-color: #45a049;
-}
-
-.user-posts-links .btn {
-    width: 100%;
-    text-align: center;
+    transition: background-color .3s ease;
 }
 
 .container{

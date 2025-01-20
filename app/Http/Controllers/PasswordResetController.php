@@ -7,8 +7,6 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Services\PasswordResetService;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Password;
-use Illuminate\Support\Facades\Log;
 
 class PasswordResetController extends Controller
 {
@@ -77,8 +75,6 @@ class PasswordResetController extends Controller
         $passwordReset->delete();
 
         session()->flash('status', 'Password has been updated successfully.');
-        Log::info('Password successfully reset for: ' . $request->email);
-
         return redirect()->route('login')->with('status', 'Password has been reset successfully.');
     }
 }

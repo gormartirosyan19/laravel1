@@ -35,15 +35,6 @@
                 <input type="text" id="name" name="name" value="{{ old('name', $user->name) }}" required>
                 @error('name') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
-
-{{--            <div class="form-group">--}}
-{{--                <label for="email">Email:</label>--}}
-{{--                <input type="email" id="email" name="email" value="{{ old('email', $user->email) }}" required>--}}
-{{--                @error('email') <span class="text-danger">{{ $message }}</span> @enderror--}}
-{{--            </div>--}}
-
-
-
             <button type="submit">Save Changes</button>
         </form>
     </div>

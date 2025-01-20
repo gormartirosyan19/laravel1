@@ -29,7 +29,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'verification_token',
         'verification_token_expires_at',
-        'email_verified_at', // Ensure this is here
+        'email_verified_at',
     ];
 
     protected $hidden = [
@@ -41,4 +41,15 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function addresses()
+    {
+        return $this->hasMany(Address::class);
+    }
+
+    public function defaultAddress()
+    {
+        return $this->hasOne(Address::class)->where('is_default', true);
+    }
+
 }

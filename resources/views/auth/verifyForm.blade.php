@@ -15,7 +15,7 @@
 
     <form method="POST" action="{{ route('email.verify') }}">
         @csrf
-        <input type="hidden" name="token" value="{{ $token }}">
+{{--        <input type="hidden" name="token" value="{{ $token }}">--}}
 
         <label for="email">Email:</label>
         <input type="email" name="email" value="{{ old('email') }}" required>

@@ -60,4 +60,16 @@ class AssignRoles extends Page
 
         return back();
     }
+
+    public function destroy(User $user)
+    {
+        // Ensure the admin cannot delete themselves
+        if (auth()->id() === $user->id) {
+            return back()->with('error', 'You cannot remove yourself.');
+        }
+
+        $user->delete();
+
+        return back()->with('success', 'User removed successfully.');
+    }
 }

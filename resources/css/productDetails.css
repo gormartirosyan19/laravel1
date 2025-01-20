@@ -1,0 +1,53 @@
+.product {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    padding: 50px 0;
+}
+.product-details {
+    width: 60%;
+}
+.swiper {
+    width: 40%;
+    margin-right: 50px;
+}
+.form-group{
+    margin-bottom: 10px;
+}
+h1{
+    font-size: 35px !important;
+}
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.quantity-input {
+    width: 60px;
+    text-align: center;
+}
+
+.action-buttons {
+    margin-top: 15px;
+}
+
+.action-buttons .btn {
+    margin-right: 10px;
+}
+button {
+    background-color: #3182ce;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+.wishlist-icon.wishlist-toggle{
+    cursor: pointer;
+}

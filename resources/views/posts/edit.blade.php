@@ -22,7 +22,7 @@
             <label for="image_url">Post Picture:</label>
             <div class="image">
                 @if($post->image_url)
-                    <img src="{{ asset($post->image_url) }}" alt="PostPicture" style="width: 150px; height: 150px; object-fit: cover;">
+                    <img src="{{ asset('storage/'.$post->image_url) }}" alt="PostPicture" style="width: 150px; height: 150px; object-fit: cover;">
                 @else
                     <p>No post picture available. Upload a new picture.</p>
                 @endif

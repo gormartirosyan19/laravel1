@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class EnsureUserIsAdmin
 {
-
     public function handle(Request $request, Closure $next)
     {
         if (!auth()->user() || !auth()->user()->hasRole('admin')) {

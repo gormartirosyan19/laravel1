@@ -1,0 +1,133 @@
+/* Cart page styles */
+.container {
+    margin-top: 20px;
+}
+
+.table {
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+}
+
+.table th,
+.table td {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+.table td img {
+    width: 80px;
+    height: auto;
+}
+
+.table td button {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.input-group {
+    display: flex;
+}
+
+.input-group input {
+    width: 100px;
+    text-align: center;
+}
+
+.input-group button {
+    width: 40px;
+    padding: 5px;
+}
+
+.text-end {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-danger {
+    background-color: #ff1129;
+    border-color: #ff1129;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-danger:hover {
+    background-color: #cf1729;
+    border-color: #cf1729;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+.btn.checkout {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.checkout:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.btn.checkout:active {
+    background-color: #004085;
+    transform: translateY(1px);
+}
+
+.btn.checkout:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+.btn.checkout.disabled, .btn.checkout[disabled] {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.65;
+}

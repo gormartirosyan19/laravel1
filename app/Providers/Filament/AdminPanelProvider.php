@@ -3,6 +3,9 @@
 namespace App\Providers\Filament;
 
 use App\Filament\Pages\AssignRoles;
+use App\Filament\Pages\RecentActivities;
+use App\Http\Middleware\CheckAdminOrModerator;
+use App\Http\Middleware\CorsMiddleware;
 use App\Http\Middleware\EnsureUserIsAdmin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
@@ -37,6 +40,7 @@ class AdminPanelProvider extends PanelProvider
             ->pages([
                 Pages\Dashboard::class,
                 AssignRoles::class,
+                RecentActivities::class
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
@@ -53,7 +57,9 @@ class AdminPanelProvider extends PanelProvider
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
-                EnsureUserIsAdmin::class
+                EnsureUserIsAdmin::class,
+                CorsMiddleware::class,
+//                CheckAdminOrModerator::class
             ])
             ->authMiddleware([
                 Authenticate::class,

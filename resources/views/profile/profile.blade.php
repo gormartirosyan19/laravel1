@@ -28,8 +28,15 @@
     </div>
     <div class="user-posts-links">
         <ul>
-            <li><a href="{{ route('posts.create') }}" class="btn">Create a New Post</a></li>
-            <li><a href="{{ route('posts.index') }}" class="btn">View All Posts</a></li>
+            @if (Auth::check() && (Auth::user()->hasRole('admin') || Auth::user()->hasRole('moderator')))
+                <li><a href="{{ route('posts.create') }}" class="btn">Create a new post</a></li>
+                <li><a href="{{ route('posts.index', ['user_id' => Auth::id()]) }}" class="filter-btn">My posts</a></li>
+                <li><a href="{{ route('products.create')}}" class="filter-btn">Add a new product</a></li>
+                <li><a href="{{ route('products.index', ['user_id' => Auth::id()])}}" class="filter-btn">My products</a></li>
+            @endif
+            <li><a href="{{ route('orders.index')}}" class="filter-btn">Purchases</a></li>
+            <li><a href="{{ route('address.index')}}" class="filter-btn">Addresses</a></li>
         </ul>
+
     </div>
 @endsection

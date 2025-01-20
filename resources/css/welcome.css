@@ -1,58 +1,90 @@
+.hero {
+    background: url('/storage/main1.jpg') no-repeat center center / cover;
+    text-align: center;
+}
+
+.hero-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn-primary {
+    background-color: #e97451;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 30px 0;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
 .posts-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 20px 0;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .post-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    background-color: #fff;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 27%;
 }
 
-.post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.post-image {
+.post-card .post-image {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
 }
 
-.post-content {
-    padding: 15px;
-}
-
-.post-title {
-    font-size: 20px;
+.post-card .post-title {
+    font-size: 1.5rem;
     margin: 10px 0;
-    color: #333;
 }
 
-.post-excerpt {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
+.product-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 27%;
+}
+.post-content {
+    padding: 10px;
+}
+.product-card .product-image {
+    width: 100%;
+}
+.product-card h2{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.testimonial-card {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    font-style: italic;
+}
+.products-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.read-more-btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #007bff;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-.read-more-btn:hover {
-    background: #0056b3;
-}

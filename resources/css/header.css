@@ -1,12 +1,12 @@
 header {
-    background-color: azure;
-    padding: 20px;
+    background-color: #e97451;
+    padding: 0 40px;
     text-align: center;
     font-family: sans-serif;
 }
 
 header a {
-    color: #2d3748;
+    color: #ffffff;
     text-decoration: none;
     font-size: 16px;
     margin: 0 15px;
@@ -19,4 +19,41 @@ header a:hover {
 .inner-header{
     display: flex;
     justify-content: space-between;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+.cart {
+    position: relative;
+    font-size: 24px;
+}
+
+.cart .badge {
+    font-size: 12px;
+    padding: 2px;
+    position: absolute;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+}
+.wishlist {
+    position: relative;
+    font-size: 24px;
+}
+.wishlist span.badge {
+    position: absolute;
+    font-size: 12px;
+    padding: 2px;
+    background: red;
+    color: #fff;
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+}
+.logo{
+    width: 4%;
 }
